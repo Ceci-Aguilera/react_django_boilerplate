@@ -1,0 +1,62 @@
+version: "3.7"
+
+services:
+  backend:
+    build:
+      context: ./django_backend
+      dockerfile: Dockerfile
+    volumes:
+      - django_static_volume:/usr/src/app/static
+      - django_media_volume:/usr/src/app/media
+    hostname: backend
+    expose:
+      - 8000
+    command: ./entrypoint.sh
+    links:
+      - database
+  database:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    restart: 'always'
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - 5432:5432
+  frontend:
+    build:
+      context: ./react_frontend
+      dockerfile: Dockerfile
+      args:
+        - API_SERVER=${ENV_API_SERVER}
+    volumes:
+      - react_static_volume:/usr/src/app/build/static
+    hostname: frontend
+    expose:
+      - 3000
+    env_file:
+      - .env
+    command: serve -s build -l 3000
+    links:
+      - backend
+
+  nginx:
+    restart: always
+    build: ./nginx
+    volumes:
+      - django_static_volume:/usr/src/app/django_files/static
+      - django_media_volume:/usr/src/app/media
+      - react_static_volume:/usr/src/app/react_files/static
+    ports:
+      - 80:80
+    links:
+      - frontend
+
+
+volumes:
+  postgres_data:
+  django_static_volume:
+  django_media_volume:
+  react_static_volume:

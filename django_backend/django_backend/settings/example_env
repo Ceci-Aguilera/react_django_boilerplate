@@ -1,0 +1,7 @@
+SECRET_KEY='secret'
+
+DB_DOCKER_NAME='docker'
+DB_DOCKER_USER='docker'
+DB_DOCKER_PASSWORD='SuperDockerPassword5432!!!'
+DB_DOCKER_HOST='database'
+DB_DOCKER_PORT=5432

@@ -1,0 +1,10 @@
+COMPOSE_PROJECT_NAME=ceci_aguilera_react_django_nginx_postgresql
+
+ENV_API_SERVER=http://127.0.0.1
+
+POSTGRES_USER=docker
+POSTGRES_PASSWORD=SuperDockerPassword5432!!!
+POSTGRES_DB=docker
+
+# If you already have the port 3306 in use, you can change it (for example if you have MySQL)
+HOST_MACHINE_MYSQL_PORT=5432

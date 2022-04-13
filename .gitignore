@@ -1,0 +1,33 @@
+*.pyc
+/backend/db.sqlite3
+.DS_Store
+.env
+*/settings/local.py
+/static/*
+/media/*
+__pycache__/
+/.vscode/
+
+# coverage result
+.coverage
+/coverage/
+
+# pycharm
+.idea/
+
+# data
+*.dump
+
+# npm
+node_modules/
+npm-debug.log
+
+# Webpack
+/frontend/bundles/*
+/frontend/webpack_bundles/*
+/webpack-stats.json
+
+
+.direnv
+.envrc
+.tool-versions
