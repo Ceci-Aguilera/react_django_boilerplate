@@ -1,5 +1,11 @@
 SECRET_KEY='secret'
 
+DB_NAME='django_db'
+DB_USER='django_user'
+DB_PASSWORD='SuperDjangoPassword5432!!!'
+DB_HOST='localhost'
+DB_PORT=5432
+
 DB_DOCKER_NAME='docker'
 DB_DOCKER_USER='docker'
 DB_DOCKER_PASSWORD='SuperDockerPassword5432!!!'
