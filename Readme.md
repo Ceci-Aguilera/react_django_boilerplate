@@ -19,11 +19,12 @@
 1. [React Files and Folders of Interest](#react)
 1. [About Nginx Configuration](#nginx)
 1. [Useful Links](#useful_links)
+1. [Contributing](#contributing)
 
 <a name="description"></a>
 ## Description
 
-This repository contains a boilerplate project setup for Django + React applications. It is intended to have the minimal amount of packages installed that are needed, and it has a ready-to-test default configuration for Docker.
+This repository contains a simple boilerplate project setup for Django + React applications. It is intended to have the minimal amount of packages installed that are needed, and it has a ready-to-test default configuration for Docker.
 
 <a name="tech_stack"></a>
 ## Tech Stack and Packages Installed
@@ -55,7 +56,7 @@ This repository contains a boilerplate project setup for Django + React applicat
     ```bash
     git clone https://github.com/Ceci-Aguilera/react_django_boilerplate.git
     ```
-1. Configure the environment variables for docker-compose (react and postgresql default environment variables) and for django:
+1. Copy a default setup of the environment variables for docker-compose and for django:
     ```bash
     cp example_env .env
     cp django_backend/django_backend/example_env django_backend/django_backend/.env
@@ -149,6 +150,8 @@ __Note:__ To now how to install and configure PostgreSQL, see the [Useful Links]
     npm start
     ```
 
+Congratulations !!! The app should be up and running. To access the __React__ frontend go to [localhost:3000](http://localhost:3000), and to access the __Django__ backend go to [localhost:8000](http://localhost:8000).
+
 
 <a name="structure"></a>
 ## Structure for Docker-Compose Explained
@@ -187,6 +190,30 @@ The following structure when working on a React project was taken from the Next 
           |____ styles
           |____ assets
 ```
+
+---
+
+
+<a name="contributing"></a>
+## Contributing
+
+Inputs and contributions to this project are appreciated. To make them as transparent and easy as possible, please follow this steps:
+
+- ### How to contribute:
+    1. Fork the repo and create your branch from master
+    1. Clone the project to your own machine
+    1. Commit changes to your own branch
+    1. Update documentation
+    1. Push your work back up to your fork
+    1. Submit a Pull request
+
+    #### Don't:
+    - Don't include any license information when submitting your code as this repository is MIT licensed, and so your submissions are understood to be under the same MIT License as well.
+
+- ### How to report a bug:
+    1. Open a new Issue.
+    1. Write a bug report with details, background, and when possible sample code. That's it!
+
 
 <a name="useful_links"></a>
 ## Useful Links
@@ -228,3 +255,7 @@ The following structure when working on a React project was taken from the Next 
 - Create Virual Environment with Virtualenv and Virtualenvwrapper: [Link](https://docs.python-guide.org/dev/virtualenvs/)
 - [Configure CORS](https://www.stackhawk.com/blog/django-cors-guide/)
 - [Setup Django with Cloudinary](https://cloudinary.com/documentation/django_integration)
+
+
+
+

@@ -10,7 +10,7 @@ environ.Env.read_env()
 SECRET_KEY= env("SECRET_KEY")
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:80",
 ]
 
 DATABASES = {
