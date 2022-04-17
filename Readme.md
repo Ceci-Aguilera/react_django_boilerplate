@@ -26,6 +26,8 @@
 
 This repository contains a simple boilerplate project setup for Django + React applications. It is intended to have the minimal amount of packages installed by default, and it has a ready-to-test default configuration for Docker.
 
+For example, see [Fullstack Web Home Key Renovations](https://github.com/Ceci-Aguilera/fullstack-web-home-key-renovations). Home Key Renovations (HKR) is a fullstack website that has this repository as base template.
+
 <a name="tech_stack"></a>
 ## Tech Stack and Packages Installed
 
